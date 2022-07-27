@@ -13,7 +13,7 @@ const eqArrays = function(firstArray, secondArray) {
       answer = false;
     }
   }
-  console.log(answer);
+  return answer;
 }
 
 
