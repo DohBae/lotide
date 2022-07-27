@@ -8,9 +8,10 @@ const assertEqual = function(actual, expected) {
 
 const countLetters = function (string) {
   const lowerCaseStr = string.toLowerCase();
+  const noSpaceStr = lowerCaseStr.replaceAll(' ', '');
   const result = {};
 
-  for (let letter of lowerCaseStr) {
+  for (let letter of noSpaceStr) {
     if (result[letter] === undefined) {
       result[letter] = 1;
     } else {
