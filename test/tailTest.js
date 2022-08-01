@@ -1,8 +1,15 @@
+const assert = require('chai').assert;
 const tail = require('../tail');
 const assertEqual = require('../assertEqual');
 
-assertEqual(tail(["Hello", "Lighthouse", "Labs"]), ["Lighthouse", "Labs"]);
-assertEqual(tail([1]), []);
-assertEqual(tail([]), []);
-assertEqual(tail([1, 2, 3, 4, 5]), [2, 3, 4, 5]);
-assertEqual(tail(["Mary", "had", "a", "little", "lamb"]), ["had", "a", "little","lamb"]);
+describe("#tail", () => {
+it("should return all of the indices of an array execpt the first index", () => {
+  assert.deepEqual(tail(["Hello", "Lighthouse", "Labs"]), ["Lighthouse", "Labs"]);
+});
+it("should return an empty array if there is only one index in the array", () => {
+  assert.equal(tail([1]), undefined);
+});
+it("should return an empty array if given an empty array", () => {
+  assert.equal(tail([]), undefined);
+});
+});
