@@ -13,4 +13,3 @@ module.exports = {
   assertEqual,
   assertArrayEqual
 };
-console.log(module.exports);
